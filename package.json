@@ -8,6 +8,7 @@
     "dotenv": "^16.4.7",
     "fuzzyset": "^1.0.7",
     "keyv": "^5.2.1",
+    "node-html-parser": "^6.1.13",
     "pino": "^9.5.0",
     "pm2": "^5.4.3"
   },
@@ -20,7 +21,8 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "nodemon index.js",
+    "start": "nodemon src/index.js",
+    "update-pantry": "nodemon src/pasta.js",
     "production": "pm2 start index.js",
     "stop": "pm2 stop index.js",
     "restart": "pm2 restart index.js"

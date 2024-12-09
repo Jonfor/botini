@@ -5,9 +5,9 @@ import pretty from 'pino-pretty';
 import FuzzySet from 'fuzzyset';
 import {Keyv} from 'keyv';
 
-import pastaJson from './pasta.json' with {type: 'json'};
-import memeJson from './memes.json' with {type: 'json'};
-import foodJson from './food.json' with {type: 'json'};
+import memeJson from '../data/memes.json' with {type: 'json'};
+import foodJson from '../data/food.json' with {type: 'json'};
+import pastaJson from "../data/pastas.json" with {type: 'json'}
 
 let logger;
 if (pretty.isColorSupported) {
