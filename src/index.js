@@ -1,7 +1,5 @@
 import "dotenv/config";
 import { Client, Events, GatewayIntentBits } from "discord.js";
-import { pino } from "pino";
-import pretty from "pino-pretty";
 import FuzzySet from "fuzzyset";
 import { Keyv } from "keyv";
 
@@ -9,19 +7,7 @@ import memeJson from "../data/memes.json" with { type: "json" };
 import foodJson from "../data/food.json" with { type: "json" };
 import pastaJson from "../data/pastas.json" with { type: "json" };
 
-let logger;
-if (pretty.isColorSupported) {
-  logger = pino({
-    transport: {
-      target: "pino-pretty",
-      options: {
-        colorize: true,
-      },
-    },
-  });
-} else {
-  logger = pino();
-}
+const logger = logger();
 
 const fuzzyPastaSet = FuzzySet();
 pastaJson.forEach((pasta) => {
