@@ -2,7 +2,7 @@
   "name": "botini",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "dependencies": {
     "discord.js": "^14.17.3",
     "dotenv": "^16.4.7",
