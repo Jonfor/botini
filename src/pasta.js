@@ -1,7 +1,7 @@
 import { parse } from "node-html-parser";
 
 /**
- *
+ * TODO Mama mia this is broken and returning null idk why
  * @param revision Defaults to revision on 23 November 2024
  */
 export async function fetchPastas(revision = 1259032650) {
