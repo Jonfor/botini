@@ -11,7 +11,7 @@
     "keyv": "^5.3.3",
     "node-html-parser": "^7.0.1",
     "pino": "^9.7.0",
-    "pm2": "^6.0.6"
+    "pm2": "^6.0.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.28.0",
