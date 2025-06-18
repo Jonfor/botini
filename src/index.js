@@ -340,7 +340,7 @@ async function isUserRateLimited(username) {
 export default {
 	async fetch(request, env, ctx) {
 		// eslint-disable-next-line no-undef
-		const DISCORD_TOKEN = process.env.DISCORD_TOKEN ? process.env.DISCORD_TOKEN : env.DISCORD_TOKEN;
+		const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
 
 		if (!DISCORD_TOKEN) {
 			logger.error('Error: Specify DISCORD_TOKEN in .env or .dev.vars');

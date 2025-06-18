@@ -43,5 +43,6 @@
   },
   "description": "A Discord bot to make Nonna proud!",
   "type": "module",
-  "private": true
+  "private": true,
+  "packageManager": "yarn@1.22.22"
 }
