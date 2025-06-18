@@ -38,39 +38,24 @@ const MEME_SET = 'MEME_SET';
 const rateLimitWindow = 10 * 1000; // 10-second window in milliseconds
 const maxRequests = 5; // Allow 5 requests per user per window
 
-// eslint-disable-next-line no-undef
-if (!process.env.DISCORD_TOKEN) {
-	logger.error('Error: Specify DISCORD_TOKEN in .env');
-	// eslint-disable-next-line no-undef
-	process.exit(1);
-}
-
-const client = new Client({
-	intents: [
-		GatewayIntentBits.Guilds,
-		GatewayIntentBits.GuildMessages,
-		GatewayIntentBits.MessageContent,
-		GatewayIntentBits.GuildMessageReactions,
-	],
-});
-
 let textChannels;
 let keyv;
+
 // When the client is ready, run this code (only once).
 // The distinction between `client: Client<boolean>` and `readyClient: Client<true>` is important for TypeScript developers.
 // It makes some properties non-nullable.
-client.once(Events.ClientReady, (readyClient) => {
+function handleClientReady(readyClient) {
 	logger.info(`Ready! Logged in as ${readyClient.user.tag}`);
 
 	keyv = new Keyv();
-	textChannels = client.channels.cache
+	textChannels = readyClient.channels.cache
 		.filter((channel) => {
 			return channel.isTextBased() && channel.isSendable();
 		})
 		.map((channel) => {
 			return channel.id;
 		});
-});
+}
 
 function getHighestScoringInSet(allMatchedItems) {
 	return allMatchedItems?.reduce((maxItem, currentItem) => (currentItem[0] > maxItem[0] ? currentItem : maxItem))[0];
@@ -190,7 +175,7 @@ async function makeRequest(searchTerm, usernameMakingRequest) {
 	return response.json();
 }
 
-client.on(Events.MessageCreate, async (message) => {
+async function handleMessageCreate(message) {
 	if (message.author.bot) return;
 
 	if (!textChannels.includes(message.channelId)) return;
@@ -282,10 +267,7 @@ client.on(Events.MessageCreate, async (message) => {
 
 	logger.info(`Sending: ${stuffToSend}`);
 	message.channel.send(stuffToSend);
-});
-
-// eslint-disable-next-line no-undef
-client.login(process.env.DISCORD_TOKEN).then(() => logger.info('Logged in!'));
+}
 
 class RequestNotFoundError extends Error {
 	constructor(message) {
@@ -354,3 +336,33 @@ async function isUserRateLimited(username) {
 		return true; // The request is allowed
 	}
 }
+
+export default {
+	async fetch(request, env, ctx) {
+		// eslint-disable-next-line no-undef
+		const DISCORD_TOKEN = process.env.DISCORD_TOKEN ? process.env.DISCORD_TOKEN : env.DISCORD_TOKEN;
+
+		if (!DISCORD_TOKEN) {
+			logger.error('Error: Specify DISCORD_TOKEN in .env or .dev.vars');
+			// eslint-disable-next-line no-undef
+			process.exit(1);
+		}
+
+		const client = new Client({
+			intents: [
+				GatewayIntentBits.Guilds,
+				GatewayIntentBits.GuildMessages,
+				GatewayIntentBits.MessageContent,
+				GatewayIntentBits.GuildMessageReactions,
+			],
+		});
+
+		client.once(Events.ClientReady, (readyClient) => handleClientReady(readyClient));
+
+		client.login(DISCORD_TOKEN).then(() => logger.info('Logged in!'));
+
+		client.on(Events.MessageCreate, (message) => handleMessageCreate(message));
+
+		return new Response('Hello World!');
+	},
+};

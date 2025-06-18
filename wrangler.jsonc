@@ -4,6 +4,9 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
 	"name": "botini",
 	"main": "src/index.js",
 	"compatibility_date": "2025-05-05",
