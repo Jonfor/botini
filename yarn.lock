@@ -2469,6 +2469,11 @@ discord-api-types@^0.38.1:
   resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.38.1.tgz#2148f42141871945495efdb39303715e3dc19cc0"
   integrity sha512-vsjsqjAuxsPhiwbPjTBeGQaDPlizFmSkU0mTzFGMgRxqCDIRBR7iTY74HacpzrDV0QtERHRKQEk1tq7drZUtHg==
 
+discord-interactions@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/discord-interactions/-/discord-interactions-4.3.0.tgz#8bd82c764d7b61070e8ad2d5e905fb6ee5dcdfca"
+  integrity sha512-qCJEnuQeIDIo26MPEqYlIiYokqwFAMoRsmEE0PgAuiTYNXIMB9Z40LmqlgYe0yBO+743+AOnfTQdUK1WLg8+pw==
+
 discord.js@^14.19.3:
   version "14.19.3"
   resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-14.19.3.tgz#ed08c61ad300efc3033ecf2b70f28a68d95b138a"
@@ -3297,6 +3302,11 @@ istanbul-reports@^3.1.3:
   dependencies:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
+
+itty-router@^5.0.18:
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/itty-router/-/itty-router-5.0.18.tgz#d2ba2e751c364c78178604fac598b5072325b412"
+  integrity sha512-mK3ReOt4ARAGy0V0J7uHmArG2USN2x0zprZ+u+YgmeRjXTDbaowDy3kPcsmQY6tH+uHhDgpWit9Vqmv/4rTXwA==
 
 jackspeak@^3.1.2:
   version "3.4.3"
