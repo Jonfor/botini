@@ -1,9 +1,9 @@
-import { fetchPastas } from "./pasta";
+import { fetchPastas } from './pasta';
 
-describe("pastas", () => {
-  test("that the pasta list works", async () => {
-    const pastas = await fetchPastas();
-    expect(pastas).toMatchInlineSnapshot(`
+describe('pastas', () => {
+	test('that the pasta list works', async () => {
+		const pastas = await fetchPastas();
+		expect(pastas).toMatchInlineSnapshot(`
 [
   "Barbine",
   "Bavette",
@@ -187,5 +187,5 @@ describe("pastas", () => {
   "Gnocchi",
 ]
 `);
-  });
+	});
 });

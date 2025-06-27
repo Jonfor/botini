@@ -1,14 +1,14 @@
 [
-  {
-    "Pisces": {
-      "pasta": "Gnocchi",
-      "premonition": "Soft, comforting, and a little dreamy. This week, don't let your emotions turn you into mush-stand firm, even when life's boiling hot.",
-      "sauce_pairing": "Lobster Cream Sauce - luxurious, indulgent, and pairs perfectly with your deep emotional side."
-    },
-    "Aquarius": {
-      "pasta": "Farfalle",
-      "premonition": "Quirky, unique, and marching to your own boil. This week, embrace your individuality, but don't get too lost in your thoughts-stay grounded like a well-drained noodle.",
-      "sauce_pairing": "Walnut Pesto - unconventional, nutty, and totally underrated (just like your ideas)."
-    }
-  }
+	{
+		"Pisces": {
+			"pasta": "Gnocchi",
+			"premonition": "Soft, comforting, and a little dreamy. This week, don't let your emotions turn you into mush-stand firm, even when life's boiling hot.",
+			"sauce_pairing": "Lobster Cream Sauce - luxurious, indulgent, and pairs perfectly with your deep emotional side."
+		},
+		"Aquarius": {
+			"pasta": "Farfalle",
+			"premonition": "Quirky, unique, and marching to your own boil. This week, embrace your individuality, but don't get too lost in your thoughts-stay grounded like a well-drained noodle.",
+			"sauce_pairing": "Walnut Pesto - unconventional, nutty, and totally underrated (just like your ideas)."
+		}
+	}
 ]
