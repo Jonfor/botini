@@ -6,7 +6,7 @@
 	"dependencies": {
 		"discord-interactions": "^4.3.0",
 		"discord.js": "^14.21.0",
-		"dotenv": "^16.6.0",
+		"dotenv": "^17.0.0",
 		"fuzzyset": "^1.0.7",
 		"itty-router": "^5.0.18",
 		"jest": "^30.0.3",
