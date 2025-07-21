@@ -16,7 +16,7 @@
 		"pm2": "^6.0.8"
 	},
 	"devDependencies": {
-		"@cloudflare/vitest-pool-workers": "^0.8.53",
+		"@cloudflare/vitest-pool-workers": "^0.8.55",
 		"@eslint/js": "^9.31.0",
 		"@vitest/runner": "^3.2.4",
 		"@vitest/snapshot": "^3.2.4",
