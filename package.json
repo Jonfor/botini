@@ -6,10 +6,10 @@
 	"dependencies": {
 		"discord-interactions": "^4.3.0",
 		"discord.js": "^14.21.0",
-		"dotenv": "^17.2.0",
+		"dotenv": "^17.2.1",
 		"fuzzyset": "^1.0.7",
-		"itty-router": "^5.0.18",
-		"jest": "^30.0.4",
+		"itty-router": "^5.0.20",
+		"jest": "^30.0.5",
 		"keyv": "^5.4.0",
 		"node-html-parser": "^7.0.1",
 		"pino": "^9.7.0",
