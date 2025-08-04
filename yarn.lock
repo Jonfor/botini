@@ -3282,10 +3282,10 @@ istanbul-reports@^3.1.3:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
-itty-router@^5.0.20:
-  version "5.0.20"
-  resolved "https://registry.yarnpkg.com/itty-router/-/itty-router-5.0.20.tgz#a61417bef1d00e3456588104e3f661a3c68e39e1"
-  integrity sha512-D27Q+6D3q4Fho3ixmbE+qbu+7N/OqO7ty8Eh62PkyEhg4oBRPV3+HBU3GBXneuc430sRql9Az6qTdCiJKFbHtw==
+itty-router@^5.0.21:
+  version "5.0.21"
+  resolved "https://registry.yarnpkg.com/itty-router/-/itty-router-5.0.21.tgz#1b1c11ed0dd5eb6626a8cfd055c35ebf3378740e"
+  integrity sha512-SrmsBfXtdoIkuDMTMXqCT0kYSl9OlQZLC7llHs4fE26dZlGfi0Cm4adNL7q/ygpWyoTZobZ547h5SZu/PwB+cg==
 
 jackspeak@^3.1.2:
   version "3.4.3"
@@ -3739,10 +3739,10 @@ keyv@^4.5.4:
   dependencies:
     json-buffer "3.0.1"
 
-keyv@^5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/keyv/-/keyv-5.4.0.tgz#64895135d5b63e8bde6889d2b53a8e4af8e387b9"
-  integrity sha512-TMckyVjEoacG5IteUpUrOBsFORtheqziVyyY2dLUwg1jwTb8u48LX4TgmtogkNl9Y9unaEJ1luj10fGyjMGFOQ==
+keyv@^5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/keyv/-/keyv-5.5.0.tgz#0ad5037484a7e01b033df7018033b5cc9ca7884f"
+  integrity sha512-QG7qR2tijh1ftOvClut4YKKg1iW6cx3GZsKoGyJPxHkGWK9oJhG9P3j5deP0QQOGDowBMVQFaP+Vm4NpGYvmIQ==
   dependencies:
     "@keyv/serialize" "^1.1.0"
 
