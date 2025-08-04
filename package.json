@@ -8,9 +8,9 @@
 		"discord.js": "^14.21.0",
 		"dotenv": "^17.2.1",
 		"fuzzyset": "^1.0.7",
-		"itty-router": "^5.0.20",
+		"itty-router": "^5.0.21",
 		"jest": "^30.0.5",
-		"keyv": "^5.4.0",
+		"keyv": "^5.5.0",
 		"node-html-parser": "^7.0.1",
 		"pino": "^9.7.0",
 		"pm2": "^6.0.8"
