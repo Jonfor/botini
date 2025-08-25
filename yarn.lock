@@ -523,17 +523,17 @@
   dependencies:
     discord-api-types "^0.38.1"
 
-"@discordjs/rest@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@discordjs/rest/-/rest-2.5.1.tgz#a6bde4d08f0e23bd763506cc1fcc83564afee077"
-  integrity sha512-Tg9840IneBcbrAjcGaQzHUJWFNq1MMWZjTdjJ0WS/89IffaNKc++iOvffucPxQTF/gviO9+9r8kEPea1X5J2Dw==
+"@discordjs/rest@^2.5.1", "@discordjs/rest@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@discordjs/rest/-/rest-2.6.0.tgz#8c449b0d5c22a4cd9c655f5d1d53a20b05c37f10"
+  integrity sha512-RDYrhmpB7mTvmCKcpj+pc5k7POKszS4E2O9TYc+U+Y4iaCP+r910QdO43qmpOja8LRr1RJ0b3U+CqVsnPqzf4w==
   dependencies:
     "@discordjs/collection" "^2.1.1"
     "@discordjs/util" "^1.1.1"
     "@sapphire/async-queue" "^1.5.3"
     "@sapphire/snowflake" "^3.5.3"
     "@vladfrangu/async_event_emitter" "^2.4.6"
-    discord-api-types "^0.38.1"
+    discord-api-types "^0.38.16"
     magic-bytes.js "^1.10.0"
     tslib "^2.6.3"
     undici "6.21.3"
@@ -2451,29 +2451,29 @@ devalue@^4.3.0:
   resolved "https://registry.yarnpkg.com/devalue/-/devalue-4.3.3.tgz#e35df3bdc49136837e77986f629b9fa6fef50726"
   integrity sha512-UH8EL6H2ifcY8TbD2QsxwCC/pr5xSwPvv85LrLXVihmHVC3T3YqTCIwnR5ak0yO1KYqlxrPVOA/JVZJYPy2ATg==
 
-discord-api-types@^0.38.1:
-  version "0.38.1"
-  resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.38.1.tgz#2148f42141871945495efdb39303715e3dc19cc0"
-  integrity sha512-vsjsqjAuxsPhiwbPjTBeGQaDPlizFmSkU0mTzFGMgRxqCDIRBR7iTY74HacpzrDV0QtERHRKQEk1tq7drZUtHg==
+discord-api-types@^0.38.1, discord-api-types@^0.38.16:
+  version "0.38.21"
+  resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.38.21.tgz#f28d3546869038db247d16e85900f2033b880aa5"
+  integrity sha512-E6KtXUNjZVIYP1GMjmeRdAC1xRql9xtSahRwJYpP74/hJ6Q2i2oTp6ZbFG/FUN0WqtdW2igHDsJyF2u9hV8pHQ==
 
 discord-interactions@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/discord-interactions/-/discord-interactions-4.3.0.tgz#8bd82c764d7b61070e8ad2d5e905fb6ee5dcdfca"
   integrity sha512-qCJEnuQeIDIo26MPEqYlIiYokqwFAMoRsmEE0PgAuiTYNXIMB9Z40LmqlgYe0yBO+743+AOnfTQdUK1WLg8+pw==
 
-discord.js@^14.21.0:
-  version "14.21.0"
-  resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-14.21.0.tgz#f786b39083dce3add74966a926ca3cce1251cd92"
-  integrity sha512-U5w41cEmcnSfwKYlLv5RJjB8Joa+QJyRwIJz5i/eg+v2Qvv6EYpCRhN9I2Rlf0900LuqSDg8edakUATrDZQncQ==
+discord.js@^14.22.1:
+  version "14.22.1"
+  resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-14.22.1.tgz#aa364cf0108b41bac3eaa9fa1aae836d0882a91c"
+  integrity sha512-3k+Kisd/v570Jr68A1kNs7qVhNehDwDJAPe4DZ2Syt+/zobf9zEcuYFvsfIaAOgCa0BiHMfOOKQY4eYINl0z7w==
   dependencies:
     "@discordjs/builders" "^1.11.2"
     "@discordjs/collection" "1.5.3"
     "@discordjs/formatters" "^0.6.1"
-    "@discordjs/rest" "^2.5.1"
+    "@discordjs/rest" "^2.6.0"
     "@discordjs/util" "^1.1.1"
     "@discordjs/ws" "^1.2.3"
     "@sapphire/snowflake" "3.5.3"
-    discord-api-types "^0.38.1"
+    discord-api-types "^0.38.16"
     fast-deep-equal "3.1.3"
     lodash.snakecase "4.1.1"
     magic-bytes.js "^1.10.0"
@@ -3282,10 +3282,10 @@ istanbul-reports@^3.1.3:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
-itty-router@^5.0.21:
-  version "5.0.21"
-  resolved "https://registry.yarnpkg.com/itty-router/-/itty-router-5.0.21.tgz#1b1c11ed0dd5eb6626a8cfd055c35ebf3378740e"
-  integrity sha512-SrmsBfXtdoIkuDMTMXqCT0kYSl9OlQZLC7llHs4fE26dZlGfi0Cm4adNL7q/ygpWyoTZobZ547h5SZu/PwB+cg==
+itty-router@^5.0.22:
+  version "5.0.22"
+  resolved "https://registry.yarnpkg.com/itty-router/-/itty-router-5.0.22.tgz#71f5fa32e1af2753847342f4b44c9baa4418c68a"
+  integrity sha512-9hmdGErWdYDOurGYxSbqLhy4EFReIwk71hMZTJ5b+zfa2zjMNV1ftFno2b8VjAQvX615gNB8Qxbl9JMRqHnIVA==
 
 jackspeak@^3.1.2:
   version "3.4.3"
@@ -4241,10 +4241,10 @@ pino-std-serializers@^7.0.0:
   resolved "https://registry.yarnpkg.com/pino-std-serializers/-/pino-std-serializers-7.0.0.tgz#7c625038b13718dbbd84ab446bd673dc52259e3b"
   integrity sha512-e906FRY0+tV27iq4juKzSYPbUj2do2X2JX4EzSca1631EB2QJQUqGbDuERal7LCtOpxl6x3+nvo9NPZcmjkiFA==
 
-pino@^9.8.0:
-  version "9.8.0"
-  resolved "https://registry.yarnpkg.com/pino/-/pino-9.8.0.tgz#8730b8ff2e1b94ef3691666ee067f7352fef1de8"
-  integrity sha512-L5+rV1wL7vGAcxXP7sPpN5lrJ07Piruka6ArXr7EWBXxdVWjJshGVX8suFsiusJVcGKDGUFfbgbnKdg+VAC+0g==
+pino@^9.9.0:
+  version "9.9.0"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-9.9.0.tgz#0d2667ab4a54b561a4434a321ec595f305ab9cd1"
+  integrity sha512-zxsRIQG9HzG+jEljmvmZupOMDUQ0Jpj0yAgE28jQvvrdYTlEaiGwelJpdndMl/MBuRr70heIj83QyqJUWaU8mQ==
   dependencies:
     atomic-sleep "^1.0.0"
     fast-redact "^3.1.1"
