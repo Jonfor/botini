@@ -10,9 +10,9 @@
 		"fuzzyset": "^1.0.7",
 		"itty-router": "^5.0.22",
 		"jest": "^30.1.3",
-		"keyv": "^5.5.0",
+		"keyv": "^5.5.1",
 		"node-html-parser": "^7.0.1",
-		"pino": "^9.9.4",
+		"pino": "^9.9.5",
 		"pm2": "^6.0.10"
 	},
 	"devDependencies": {
