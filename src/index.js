@@ -4,8 +4,6 @@ import { pino } from 'pino';
 import pretty from 'pino-pretty';
 import FuzzySet from 'fuzzyset';
 import { Keyv } from 'keyv';
-import { InteractionResponseType, InteractionType, verifyKey } from 'discord-interactions';
-import { AutoRouter } from 'itty-router';
 
 import memeJson from '../data/memes.json' with { type: 'json' };
 import foodJson from '../data/food.json' with { type: 'json' };
@@ -42,48 +40,6 @@ const maxRequests = 5; // Allow 5 requests per user per window
 
 let textChannels;
 let keyv;
-
-// eslint-disable-next-line no-undef
-const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
-if (!DISCORD_TOKEN) {
-	logger.error('Error: Specify DISCORD_TOKEN in .env');
-	// eslint-disable-next-line no-undef
-	process.exit(1);
-}
-
-const router = AutoRouter();
-
-router.post('/', async (request, env) => {
-	const { isValid, interaction } = await server.verifyDiscordRequest(request);
-	if (!isValid || !interaction) {
-		return new Response('Bad request signature.', { status: 401 });
-	}
-
-	const client = new Client({
-		intents: [
-			GatewayIntentBits.Guilds,
-			GatewayIntentBits.GuildMessages,
-			GatewayIntentBits.MessageContent,
-			GatewayIntentBits.GuildMessageReactions,
-		],
-	});
-
-	if (interaction.type === InteractionType.PING) {
-		// The `PING` message is used during the initial webhook handshake, and is
-		// required to configure the webhook in the developer portal.
-		return new JsonResponse({
-			type: InteractionResponseType.PONG,
-		});
-	}
-
-	client.once(Events.ClientReady, (readyClient) => handleClientReady(readyClient));
-
-	client.login(DISCORD_TOKEN).then(() => logger.info('Logged in!'));
-
-	client.on(Events.MessageCreate, (message) => handleMessageCreate(message));
-});
-
-router.all('*', () => new Response('Not Found.', { status: 404 }));
 
 // When the client is ready, run this code (only once).
 // The distinction between `client: Client<boolean>` and `readyClient: Client<true>` is important for TypeScript developers.
@@ -334,18 +290,6 @@ class RateLimitError extends Error {
 	}
 }
 
-class JsonResponse extends Response {
-	constructor(body, init) {
-		const jsonBody = JSON.stringify(body);
-		init = init || {
-			headers: {
-				'content-type': 'application/json;charset=UTF-8',
-			},
-		};
-		super(jsonBody, init);
-	}
-}
-
 function findPastaRelatedItems(inputString) {
 	const lowerCaseInput = inputString.toLowerCase();
 	const matches = [];
@@ -393,22 +337,32 @@ async function isUserRateLimited(username) {
 	}
 }
 
-async function verifyDiscordRequest(request) {
-	const signature = request.headers.get('x-signature-ed25519');
-	const timestamp = request.headers.get('x-signature-timestamp');
-	const body = await request.text();
-	// eslint-disable-next-line no-undef
-	const isValidRequest = signature && timestamp && (await verifyKey(body, signature, timestamp, process.env.DISCORD_PUBLIC_KEY));
-	if (!isValidRequest) {
-		return { isValid: false };
-	}
+export default {
+	async fetch(request, env, ctx) {
+		// eslint-disable-next-line no-undef
+		const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
 
-	return { interaction: JSON.parse(body), isValid: true };
-}
+		if (!DISCORD_TOKEN) {
+			logger.error('Error: Specify DISCORD_TOKEN in .env or .dev.vars');
+			// eslint-disable-next-line no-undef
+			process.exit(1);
+		}
 
-const server = {
-	verifyDiscordRequest,
-	fetch: router.fetch,
+		const client = new Client({
+			intents: [
+				GatewayIntentBits.Guilds,
+				GatewayIntentBits.GuildMessages,
+				GatewayIntentBits.MessageContent,
+				GatewayIntentBits.GuildMessageReactions,
+			],
+		});
+
+		client.once(Events.ClientReady, (readyClient) => handleClientReady(readyClient));
+
+		client.login(DISCORD_TOKEN).then(() => logger.info('Logged in!'));
+
+		client.on(Events.MessageCreate, (message) => handleMessageCreate(message));
+
+		return new Response('Hello World!');
+	},
 };
-
-export default server;
