@@ -16,30 +16,19 @@
 		"pm2": "^6.0.13"
 	},
 	"devDependencies": {
-		"@cloudflare/vitest-pool-workers": "^0.9.13",
 		"@eslint/js": "^9.38.0",
-		"@vitest/runner": "^3.2.4",
-		"@vitest/snapshot": "^3.2.4",
 		"eslint": "^9.38.0",
 		"globals": "^16.4.0",
 		"nodemon": "^3.1.10",
 		"pino-pretty": "^13.1.2",
-		"prettier": "3.6.2",
-		"vitest": "~3.2.4",
-		"wrangler": "^4.20.3"
+		"prettier": "3.6.2"
 	},
 	"scripts": {
-		"deploy": "wrangler deploy",
-		"dev": "wrangler dev",
 		"lint": "eslint .",
 		"start": "nodemon src/index.js",
-		"update-pantry": "node scripts/update-pantry.js",
 		"production": "pm2 start index.js",
 		"stop": "pm2 stop index.js",
 		"restart": "pm2 restart index.js",
-		"wrangler-test": "vitest",
-		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-		"test:ci": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
 		"format": "prettier . --write",
 		"format:check": "prettier . --check"
 	},
