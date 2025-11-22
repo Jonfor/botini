@@ -4,11 +4,11 @@
 	"main": "index.js",
 	"license": "AGPL-3.0",
 	"dependencies": {
-		"discord.js": "^14.24.2",
+		"discord.js": "^14.25.1",
 		"dotenv": "^17.2.3",
 		"fuzzyset": "^1.0.7",
 		"jest": "^30.2.0",
-		"keyv": "^5.5.3",
+		"keyv": "^5.5.4",
 		"node-html-parser": "^7.0.1",
 		"pino": "^10.1.0",
 		"pm2": "^6.0.13"
