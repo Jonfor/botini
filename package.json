@@ -8,8 +8,8 @@
 		"dotenv": "^17.2.3",
 		"fuzzyset": "^1.0.7",
 		"keyv": "^5.5.5",
-		"node-html-parser": "^7.0.1",
-		"pino": "^10.1.0",
+		"node-html-parser": "^7.0.2",
+		"pino": "^10.1.1",
 		"pm2": "^6.0.14"
 	},
 	"devDependencies": {
