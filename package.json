@@ -9,7 +9,7 @@
 		"fuzzyset": "^1.0.7",
 		"keyv": "^5.5.5",
 		"node-html-parser": "^7.0.2",
-		"pino": "^10.1.1",
+		"pino": "^10.2.0",
 		"pm2": "^6.0.14"
 	},
 	"devDependencies": {
