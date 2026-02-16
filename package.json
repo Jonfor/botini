@@ -5,11 +5,11 @@
 	"license": "AGPL-3.0",
 	"dependencies": {
 		"discord.js": "^14.25.1",
-		"dotenv": "^17.2.4",
+		"dotenv": "^17.3.1",
 		"fuzzyset": "^1.0.7",
 		"keyv": "^5.6.0",
 		"node-html-parser": "^7.0.2",
-		"pino": "^10.3.0",
+		"pino": "^10.3.1",
 		"pm2": "^6.0.14"
 	},
 	"devDependencies": {
