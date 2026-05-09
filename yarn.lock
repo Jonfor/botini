@@ -1226,10 +1226,10 @@ pm2-sysmonit@^1.2.8:
     systeminformation "^5.7"
     tx2 "~1.0.4"
 
-pm2@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/pm2/-/pm2-7.0.0.tgz#6d53d7aac13b92029be11cb1eb470c89a8849575"
-  integrity sha512-/VpW9f7jpy6o7k2CjWhsdCSS0YGYSSWZYz8gt2zJYg+PGOcbt50L7oZgiUqJDpJLyhIL+LnvgtRw4HXdg5pQCg==
+pm2@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/pm2/-/pm2-7.0.1.tgz#0094a414ca82f3cb8659669ccdb6f71773835683"
+  integrity sha512-h/DI7WomfdAWDzDRtjhnNfsG4Do6kuOY+VGKbqffHW3yRZMUoWzwyBDkXjrOWvnBlwuY3lYBKkozDdCagfRI4Q==
   dependencies:
     "@pm2/blessed" "0.1.81"
     "@pm2/js-api" "0.8.0"
