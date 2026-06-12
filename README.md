@@ -5,10 +5,10 @@ Nonna won't let you run her bot without your `DISCORD_TOKEN` set.
 She passes down her discord bot token guide kept secret for 3 generations to
 you [here](https://discordjs.guide/legacy/preparations/adding-your-app).
 
-Nonna says to run `yarn install` for all the ~~ingredients~~ dependencies to install. Don't @ her with your npm
+Nonna says to run `pnpm install` for all the ~~ingredients~~ dependencies to install. Don't @ her with your npm
 garbagio.
 
-Finally, it is very important to `yarn start` at just the right temperature to "shape of Italy" the Nonna bot.
+Finally, it is very important to `pnpm start` at just the right temperature to "shape of Italy" the Nonna bot.
 
 # Discord Setup
 
