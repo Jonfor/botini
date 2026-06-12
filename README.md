@@ -29,7 +29,6 @@ Finally, it is very important to `pnpm start` at just the right temperature to "
   - Embed Links
   - Read Message History
   - Add Reactions
-  - Use Slash Commands (For the future)
 
 ### Bot tab:
 
