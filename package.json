@@ -28,5 +28,5 @@
 	"description": "A Discord bot to make Nonna proud!",
 	"type": "module",
 	"private": true,
-	"packageManager": "pnpm@11.6.0"
+	"packageManager": "pnpm@11.9.0"
 }
